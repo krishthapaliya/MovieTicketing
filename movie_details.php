@@ -99,8 +99,8 @@ if (isset($_GET['id'])) {
 
     if($user_id) {
         // User details for pre-filling form
-        $user_query = "SELECT name, contact, email FROM user_detail WHERE id = ?";
-        $stmt = $conn->prepare($user_query);
+        $user_query = "SELECT username, contact, email FROM user_detail WHERE id = ?";
+$stmt = $conn->prepare($user_query);
         $stmt->bind_param("i", $user_id);
         $stmt->execute();
         $user_result = $stmt->get_result();
@@ -150,7 +150,7 @@ body {
     border-radius: 10px;
 }
 .imgcontainer {
-    max-width: 300px;
+    max-width: 400px;
     margin: auto;
     border-radius: 8px;
     overflow: hidden;
@@ -237,7 +237,7 @@ body {
     <div class="row">
         <div class="col-md-4 mb-4">
             <div class="imgcontainer">
-                <img src="uploaded_img/<?php echo urlencode($movie['image']); ?>" alt="<?php echo htmlspecialchars($movie['name']); ?>">
+                <img src="uploaded_img/<?php echo rawurlencode($movie['image']); ?>" alt="<?php echo htmlspecialchars($movie['name']); ?>">
             </div>
         </div>
 

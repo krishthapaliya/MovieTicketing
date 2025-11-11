@@ -158,8 +158,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </button>
         </form>
         <div class="mt-4 text-center">
-            <p class="text-muted">Don't have an account? <a href="register.php">Register here</a></p>
-            <p class="text-muted">Forgot Your Password? <a href="forgot-password.php">Reset here</a></p>
+            <p class="">Don't have an account? <a href="register.php">Register here</a></p>
+            <p class="">Forgot Your Password? <a href="forgot-password.php">Reset here</a></p>
         </div>
     </div>
 </body>
